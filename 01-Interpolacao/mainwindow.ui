@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>928</width>
+    <height>591</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
-      <width>651</width>
-      <height>581</height>
+      <y>10</y>
+      <width>781</width>
+      <height>521</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -30,32 +30,42 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="CarregarImg">
+   <widget class="QPushButton" name="carregar">
     <property name="geometry">
      <rect>
-      <x>669</x>
+      <x>810</x>
+      <y>30</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Carregar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="limpar">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
       <y>70</y>
-      <width>121</width>
+      <width>101</width>
       <height>22</height>
      </rect>
     </property>
     <property name="text">
-     <string>Carregar Imagem</string>
+     <string>Limpar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="LimparTela">
-    <property name="geometry">
-     <rect>
-      <x>669</x>
-      <y>110</y>
-      <width>121</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Limpar Tela</string>
-    </property>
-   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>928</width>
+     <height>19</height>
+    </rect>
+   </property>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -65,6 +75,7 @@
     <bool>false</bool>
    </attribute>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

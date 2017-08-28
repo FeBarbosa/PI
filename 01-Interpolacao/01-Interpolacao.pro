@@ -1,22 +1,20 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-03-27T10:47:32
+# Project created by QtCreator 2017-08-28T00:53:00
 #
 #-------------------------------------------------
-CONFIG += c++14
+
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = 04-equalizacaoDeHistogramas
+TARGET = 01-Interpolacao
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    histograma.cpp
+        mainwindow.cpp
 
-HEADERS  += mainwindow.h \
-    histograma.h
+HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui

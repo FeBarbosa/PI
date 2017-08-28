@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QFileDialog>
 #include <QImage>
+#include <QFileDialog>
 
 namespace Ui {
 class MainWindow;
@@ -17,17 +17,14 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    QImage imagem; //Imagem
-
 private slots:
-    void on_carregarImg_clicked();
+    void on_carregar_clicked();
 
-    void on_limparTela_clicked();
-
-    void on_obterHistograma_clicked();
+    void on_limpar_clicked();
 
 private:
     Ui::MainWindow *ui;
+    QImage imagem;
 };
 
 #endif // MAINWINDOW_H

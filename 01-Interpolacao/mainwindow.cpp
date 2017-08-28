@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-QImage imagemOriginal; // Guarda a imagem de entrada
+QImage imagemOriginal;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -15,9 +15,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-// CARREGAMENTO DA IMAGEM -------------------------------------------------------------------------
-void MainWindow::on_CarregarImg_clicked()
+void MainWindow::on_carregar_clicked()
 {
     QFileDialog dialog;
 
@@ -30,8 +28,7 @@ void MainWindow::on_CarregarImg_clicked()
     ui->imagem->setPixmap(QPixmap::fromImage(this->imagem));
 }
 
-// LIMPAR LABEL DA IMAGEM -------------------------------------------------------------------------
-void MainWindow::on_LimparTela_clicked()
+void MainWindow::on_limpar_clicked()
 {
     this->imagem = QImage(ui->imagem->width(), ui->imagem->height(), QImage::Format_RGB32);
     this->imagem.fill(QColor(255, 255, 255));
