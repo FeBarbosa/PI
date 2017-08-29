@@ -22,6 +22,9 @@ private slots:
 
     void on_limpar_clicked();
 
+    void on_aplicar_clicked();
+    void ampliar();
+    void reduzir();
 private:
     Ui::MainWindow *ui;
     QImage imagem;
