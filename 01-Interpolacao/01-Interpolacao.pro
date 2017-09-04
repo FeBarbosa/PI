@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    interpolacao.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    interpolacao.h
 
 FORMS    += mainwindow.ui

@@ -4,6 +4,10 @@
 #include <QMainWindow>
 #include <QImage>
 #include <QFileDialog>
+#include <QGraphicsScene>
+#include <QFile>
+#include <QGraphicsItem>
+#include "interpolacao.h"
 
 namespace Ui {
 class MainWindow;
@@ -23,11 +27,13 @@ private slots:
     void on_limpar_clicked();
 
     void on_aplicar_clicked();
-    void ampliar();
-    void reduzir();
+
 private:
     Ui::MainWindow *ui;
+
+public:
     QImage imagem;
+    QGraphicsScene *scene;
 };
 
 #endif // MAINWINDOW_H
