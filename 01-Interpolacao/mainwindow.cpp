@@ -47,15 +47,30 @@ void MainWindow::on_limpar_clicked()
 
 void MainWindow::on_aplicar_clicked()
 {
-    if (ui->ampliar->isChecked())// AMPLIAR A IMAGEM
+    if(ui->vizinho->isChecked())
     {
+        if (ui->ampliar->isChecked())// AMPLIAR A IMAGEM
+        {
 
-        interpolacao::vizinhoAmpliar(this->imagem);
+            interpolacao::vizinhoAmpliar(this->imagem);
 
+        }
+        else if ( ui->reduzir->isChecked()) // REDUZIR A IMAGEM
+        {
+            interpolacao::vizinhoReduzir(this->imagem);
+        }
     }
-    else if ( ui->reduzir->isChecked()) // REDUZIR A IMAGEM
+    else if(ui->bilinear->isChecked())
     {
-        interpolacao::vizinhoReduzir(this->imagem);
+        if (ui->ampliar->isChecked())// AMPLIAR A IMAGEM
+        {
+            interpolacao::BilinearAmpliar(this->imagem);
+
+        }
+        else if ( ui->reduzir->isChecked()) // REDUZIR A IMAGEM
+        {
+            //interpolacao::vizinhoReduzir(this->imagem);
+        }
     }
 
     QPixmap pixmap = QPixmap::fromImage(this->imagem);
