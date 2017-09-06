@@ -69,7 +69,7 @@ void MainWindow::on_aplicar_clicked()
         }
         else if ( ui->reduzir->isChecked()) // REDUZIR A IMAGEM
         {
-            //interpolacao::vizinhoReduzir(this->imagem);
+            interpolacao::BilinearReduzir(this->imagem);
         }
     }
 

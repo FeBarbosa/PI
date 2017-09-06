@@ -49,11 +49,15 @@ void interpolacao::BilinearAmpliar(QImage &imagem)
     {
         for (int y = 0; y < AuxImagem.height(); y++)
         {
-            if(x == AuxImagem.width()-1 || y == AuxImagem.height()-1)
+            if(x == AuxImagem.width()-1)// Acesso a última linha
             {
-
+               AuxImagem.setPixel(x, y, AuxImagem.pixelColor(x-1, y).rgb());
             }
-            else
+            else if(y == AuxImagem.height()-1) // Acesso a última coluna e não última linha
+            {
+               AuxImagem.setPixel(x, y, AuxImagem.pixelColor(x, y-1).rgb());
+            }
+            else // Acesso as demais células
             {
                 if(x%2 == 0) // Linha par
                 {
@@ -88,8 +92,30 @@ void interpolacao::BilinearAmpliar(QImage &imagem)
                         AuxImagem.setPixel(x, y, novacor.rgb());
                     }
                 }
-
             }
+        }
+    }
+
+    imagem = AuxImagem;
+}
+//------------------------------------------------------------------------------------------
+
+// Interpolação bilinear para redução ------------------------------------------------------
+void interpolacao::BilinearReduzir(QImage &imagem)
+{
+    QImage AuxImagem = QImage(imagem.width()/2, imagem.height()/2, QImage::Format_RGB32);
+    QColor cor1, cor2, cor3, cor4, novacor;
+
+    for (int x = 0, xAux = 0; x < imagem.width() && xAux < AuxImagem.width(); x = x + 2, xAux++)
+    {
+        for (int y = 0, yAux = 0; y < imagem.height() && yAux < AuxImagem.height() ; y = y + 2, yAux++)
+        {
+            cor1 = imagem.pixelColor(x, y);
+            cor2 = imagem.pixelColor(x, y+1);
+            cor3 = imagem.pixelColor(x+1, y);
+            cor4 = imagem.pixelColor(x+1, y+1);
+            novacor = QColor((cor1.red()+cor2.red()+cor3.red()+cor4.red())/4, (cor1.green()+cor2.green()+cor3.green()+cor4.green())/4, (cor1.blue()+cor2.blue()+cor3.blue()+cor4.blue())/4);
+            AuxImagem.setPixel(xAux, yAux, novacor.rgb());
         }
     }
 
