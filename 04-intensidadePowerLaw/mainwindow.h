@@ -30,11 +30,13 @@ private slots:
 
     void on_cinza_clicked();
 
+    void on_imgOriginal_clicked();
+
 private:
     Ui::MainWindow *ui;
 
 public:
-    QImage imagem;
+    QImage imagem, imagemOriginal;
     QGraphicsScene *scene;
 
 };

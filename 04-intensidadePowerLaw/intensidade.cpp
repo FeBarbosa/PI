@@ -18,9 +18,10 @@ void intensidade::transformacaoPowerLaw(QImage &imagem, int &c, double &gama)
         for (int y = 0; y < imagem.height(); y++)
         {
             cor = imagem.pixelColor(x, y);
-            red = c * std::pow(cor.red(), 1.0 / gama); //red = s, s=cr^gama
-            green = c * std::pow(cor.green(), 1.0 / gama);//green = s, s=cr^gama
-            blue = c * std::pow(cor.blue(), 1.0 / gama);//blue = s, s=cr^gama
+
+            red = c * (std::pow((double (cor.red())/255), gama))*255; //red = s, s=cr^gama
+            green = c * (std::pow((double (cor.green())/255), gama))*255;//green = s, s=cr^gama
+            blue = c * (std::pow((double (cor.blue())/255),gama))*255;//blue = s, s=cr^gama
             cor = QColor(red, green,blue);
             imagem.setPixel(x, y,cor.rgb());
         }

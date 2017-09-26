@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1094</width>
-    <height>665</height>
+    <height>664</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>10</x>
       <y>10</y>
       <width>861</width>
-      <height>581</height>
+      <height>591</height>
      </rect>
     </property>
    </widget>
@@ -28,7 +28,7 @@
     <property name="geometry">
      <rect>
       <x>880</x>
-      <y>310</y>
+      <y>340</y>
       <width>191</width>
       <height>261</height>
      </rect>
@@ -39,7 +39,7 @@
     <widget class="QPushButton" name="aplicar">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>40</x>
        <y>190</y>
        <width>89</width>
        <height>41</height>
@@ -52,7 +52,7 @@
     <widget class="QLineEdit" name="gama">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>30</x>
        <y>70</y>
        <width>113</width>
        <height>25</height>
@@ -62,7 +62,7 @@
     <widget class="QLabel" name="gama_2">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>30</x>
        <y>40</y>
        <width>91</width>
        <height>17</height>
@@ -75,20 +75,20 @@
     <widget class="QLabel" name="gama_3">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>30</x>
        <y>110</y>
-       <width>91</width>
+       <width>151</width>
        <height>17</height>
       </rect>
      </property>
      <property name="text">
-      <string>Valor C:</string>
+      <string>Valor da cosntante C:</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="constanteC">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>30</x>
        <y>140</y>
        <width>113</width>
        <height>25</height>
@@ -100,9 +100,9 @@
     <property name="geometry">
      <rect>
       <x>880</x>
-      <y>20</y>
+      <y>10</y>
       <width>191</width>
-      <height>231</height>
+      <height>301</height>
      </rect>
     </property>
     <property name="title">
@@ -145,6 +145,19 @@
      </property>
      <property name="text">
       <string>Cinza</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="imgOriginal">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>240</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Original</string>
      </property>
     </widget>
    </widget>

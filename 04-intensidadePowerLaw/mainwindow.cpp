@@ -20,8 +20,8 @@ void MainWindow::on_carregar_clicked()
 
     dialog.exec();
 
-    this->imagem = QImage(dialog.selectedFiles().first()); // Carrega a Imagem para a variável imagem
-
+    this->imagemOriginal = QImage(dialog.selectedFiles().first()); // Carrega a imagem para a variável imagemOriginal
+    this->imagem = this->imagemOriginal; //faz uma copia da imagemOriginal para a variavel imagem
     QPixmap pixmap = QPixmap::fromImage(this->imagem);
     scene->addPixmap(pixmap);
 
@@ -54,6 +54,17 @@ void MainWindow::on_cinza_clicked()
     intensidade::cinza(this->imagem); //cornversao da imagem para niveis de cinza
 
     QPixmap pixmap = QPixmap::fromImage(this->imagem);
+    this->scene->clear();
+    this->scene->addPixmap(pixmap);
+
+    ui->imagem->setScene(this->scene);
+}
+
+void MainWindow::on_imgOriginal_clicked()
+{
+    this->imagem = this->imagemOriginal; // restaurar a imagem para a imagemOriginal
+
+    QPixmap pixmap = QPixmap::fromImage(this->imagemOriginal);
     this->scene->clear();
     this->scene->addPixmap(pixmap);
 
