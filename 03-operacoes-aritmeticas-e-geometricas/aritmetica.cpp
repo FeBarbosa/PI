@@ -36,14 +36,10 @@ void aritmetica::operacao(QImage &imagem1, QImage &imagem2, int fator)
             cor1.setRgb(imagem1.pixelColor(i,j).rgb());
             cor2.setRgb(imagem2.pixelColor(i,j).rgb());
 
-            std::cout << cor1.red() << std::endl;
-
             //Faz o cálculo da operação para cada canal RGB
             canalR = aredonda(cor1.red() + fator*cor2.red());
             canalG = aredonda(cor1.green() + fator*cor2.green());
             canalB = aredonda(cor1.blue() + fator*cor2.blue());
-
-            std::cout << canalR << std::endl << std::endl;
 
             //Define a novaCor
             novaCor.setRgb(canalR, canalG, canalB);
