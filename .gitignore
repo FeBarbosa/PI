@@ -2,9 +2,15 @@
 build-02-rotulacao-Desktop_Qt_5_7_0_GCC_64bit-Debug
 build-01-Interpolacao-Desktop_Qt_5_8_0_GCC_64bit-Debug
 build-03-operacoes-aritmeticas-e-geometricas-Desktop_Qt_5_7_0_GCC_64bit-Debug
+build-03-operacoes-aritmeticas-e-geometricas-Desktop_Qt_5_8_0_GCC_64bit-Debug
 build-04-equalizacaoDeHistogramas-Desktop_Qt_5_7_0_GCC_64bit-Debug
+build-04-equalizacaoDeHistogramas-Desktop_Qt_5_8_0_GCC_64bit-Debug
 imagens
 build-04-intensidadePowerLaw-Desktop_Qt_5_8_0_GCC_64bit-Debug
 build-04-intensidadePowerLaw-Desktop_Qt_5_7_0_GCC_64bit-Release
 build-06-filtroDaMedia-Desktop_Qt_5_8_0_GCC_64bit-Debug
 build-06-filtroDaMedia-Desktop_Qt_5_7_0_GCC_64bit-Release
+build-07-filtroLaplaciano-Desktop_Qt_5_8_0_GCC_64bit-Debug
+build-07-filtroLaplaciano-Desktop_Qt_5_7_0_GCC_64bit-Release
+build-08-filtroGradiente-Desktop_Qt_5_8_0_GCC_64bit-Debug
+build-08-filtroGradiente-Desktop_Qt_5_7_0_GCC_64bit-Release
